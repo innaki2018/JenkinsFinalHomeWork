@@ -25,6 +25,11 @@ pipeline {
         }
         
     } // package
+    stage ('execute'){
+      steps {
+          sh 'cd my-app; java -cp target/classes com.mycompany.app.App'
+      }
+    }
     
   } // stages
   
