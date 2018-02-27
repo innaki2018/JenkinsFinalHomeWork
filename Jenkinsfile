@@ -30,10 +30,10 @@ pipeline {
   
   post {
     success {
-      mail to: "XXXXX@gmail.com", subject:"SUCCESS: ${JOBNAME}", body: "The build is passed."
+      sh 'echo "The build is passed successfully." '
     }
     failure {
-      mail to: "XXXXX@gmail.com", subject:"FAILURE: ${JOBNAME}", body: "The build is failed."
+      sh 'echo "The build is failed." '
     }
   } // post
  
